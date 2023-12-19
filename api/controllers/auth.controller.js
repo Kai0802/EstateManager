@@ -36,7 +36,7 @@ export const signin = async (req, res, next) => {
       return next(errorHandler(404, "User not found!"));
     } else {
       const validPassword = bcrypt.compareSync(password, validUser.password);
-      if (!validPassword) return next(errorHandler(401, "Wrong credential!"));
+      if (!validPassword) return next(errorHandler(401, "Wrong credentials!"));
       const token = jwt.sign({ id: validUser._id }, process.env.JWT_SECRET);
       const { password: pass, ...restUserInfo } = validUser._doc;
       res
