@@ -10,14 +10,24 @@ export default function SignUp() {
       [event.target.id]: event.target.value,
     });
   }
-  console.log(formData); // all of the information from the form is saved inside of formData
-  // after that we want to save it into the database
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     // event.preventDefault will prevent the page from refreshing when
     // we press on the submit button
     event.preventDefault();
+    const res = await fetch("/api/auth/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    const data = await res.json();
+    console.log(data);
   }
+
+  console.log(formData); // all of the information from the form is saved inside of formData
+  // after that we want to save it into the database
   return (
     <div className="p-3 max-w-lg mx-auto">
       <h1 className="text-3xl text-center font-semibold my-7">Sign Up</h1>
