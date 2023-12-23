@@ -1,6 +1,6 @@
 import express from "express";
 import { test } from "../controllers/user.controller.js";
-import { updateUser } from "../controllers/user.controller.js";
+import { updateUser, deleteUser } from "../controllers/user.controller.js";
 import { verifyToken } from "../utils/verifyUser.js";
 const router = express.Router();
 
@@ -11,5 +11,5 @@ router.get("/test", test);
 // when creating the user, we created a token, now we can use that
 // token to verify the user for updating user's information
 router.post("/update/:id", verifyToken, updateUser);
-
+router.delete("/delete/:id", verifyToken, deleteUser);
 export default router;
