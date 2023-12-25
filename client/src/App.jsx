@@ -1,12 +1,13 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import PrivateRoute from "./components/PrivateRoute";
 import Home from "./views/Home";
 import SignIn from "./views/SignIn";
 import SignUp from "./views/SignUp";
 import About from "./views/About";
 import Profile from "./views/Profile";
-import Header from "./components/Header";
-import PrivateRoute from "./components/PrivateRoute";
 import CreateListing from "./views/CreateListing";
 import UpdateListing from "./views/UpdateListing";
 import Listing from "./views/Listing";
@@ -32,6 +33,7 @@ export default function App() {
           />
         </Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
