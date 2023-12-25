@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ListingItem from "../components/ListingItem";
 export default function Search() {
   // we want to fill this one with a onChange event listener and a submit function
   const navigate = useNavigate();
@@ -215,10 +216,27 @@ export default function Search() {
           </button>
         </form>
       </div>
-      <div className="">
+      <div className="flex-1">
         <h1 className="text-3xl font-semibold border-b p-3 text-slate-700 mt-5">
           Listing results:
         </h1>
+        <div className="p-7 flex flex-wrap gap-4 w-full">
+          {!loading && listings.length === 0 && (
+            <p className="text-xl text-slate-700">No Listings Found...</p>
+          )}
+
+          {loading && (
+            <p className="text-xl text-slate-700 text-center w-full">
+              Loading...
+            </p>
+          )}
+          {/* We want to map through each listing we're using map, so we neede to add a key 
+              and pass listing as a prop */}
+          {!loading &&
+            listings.map((listing) => (
+              <ListingItem key={listing._id} listing={listing} />
+            ))}
+        </div>
       </div>
     </div>
   );
