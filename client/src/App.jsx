@@ -5,11 +5,12 @@ import SignIn from "./views/SignIn";
 import SignUp from "./views/SignUp";
 import About from "./views/About";
 import Profile from "./views/Profile";
-import Header from "./components/header";
+import Header from "./components/Header";
 import PrivateRoute from "./components/PrivateRoute";
 import CreateListing from "./views/CreateListing";
 import UpdateListing from "./views/UpdateListing";
 import Listing from "./views/Listing";
+import Search from "./views/Search";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/about" element={<About />} />
         <Route path="/listing/:listingId" element={<Listing />} />
+        <Route path="/search" element={<Search />} />
         <Route element={<PrivateRoute />}>
           <Route path="/profile" element={<Profile />} />
           <Route path="/create-listing" element={<CreateListing />} />
