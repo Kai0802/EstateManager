@@ -5,6 +5,7 @@ import userRouter from "./routes/user.route.js";
 import authRouter from "./routes/auth.route.js";
 import listingRouter from "./routes/listing.route.js";
 import cookieParser from "cookie-parser";
+import path from "path";
 dotenv.config();
 
 mongoose
@@ -15,6 +16,11 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
+
+// Inside of server like render we don't have a folder structure like what we have in here,
+// need dynamic directory to deploy website on render
+
+const __dirname = path.resolve();
 
 const app = express();
 app.use(express.json());
@@ -30,6 +36,11 @@ app.listen(port, () => {
 app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/listing", listingRouter);
+
+app.use(express.static(path.join(__dirname, "/client/dist")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+});
 
 app.use((error, req, res, next) => {
   const statusCode = error.statusCode || 500;
