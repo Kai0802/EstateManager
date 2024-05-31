@@ -7,7 +7,7 @@
 Download or clone the project with `git clone`, set up the `.env` file for MongoDB, Firebase, and JWT.
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/Kai0802/EstateManager.git
 ```
 
 ### Step 2:
