@@ -7,7 +7,14 @@ Change directory to `api` and run `npm install`, and do the same thing for the `
 ## Run the program ✅
 run the command `npm run dev` for both `api` and `client` folders
 ## Usage / Showcase
+### This is the homepage of the website
+It comes with a slideshow shows some of the recently added listing
 ![show case of front page](/client/public/image.png)
+![show case of front page](/client/public/homepage2.png)
+### This is the about page of the website
+![image of the about page of the website](/client/public/aboutpage.png)
+### Search page
+![showing result of an example of a search query](/client/public/search_function.png)
 ## Problems that might occur ❌
 ![DogComputerGIF](https://github.com/Kai0802/EstateManager/assets/75660550/39a439e3-231f-449a-bce3-0cf0c72e663e)
 ### Error 1: node:internal/modules/cjs/loader:1473 return process.dlopen(module, path.toNamespacedPath(filename)); 
