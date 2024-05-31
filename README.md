@@ -40,12 +40,12 @@ npm install
 
 Run the following command in both the `api` and `client` folders to start the development server.
 
-\`\`\`bash
+```bash
 cd api
 npm run dev
 cd ../client
 npm run dev
-\`\`\`
+```
 
 ## Usage / Showcase
 
