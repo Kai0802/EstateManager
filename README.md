@@ -4,18 +4,18 @@ EstateManager is a comprehensive web application for managing real estate listin
 
 ## Table of Contents
 
-1. [Installation](#installation-🛠️)
+1. [Installation](#installation)
    - [Step 1](#step-1)
    - [Step 2](#step-2)
-2. [Running the Program](#running-the-program-✅)
+2. [Running the Program](#running-the-program)
 3. [Usage / Showcase](#usage--showcase)
-4. [Troubleshooting](#troubleshooting-❌)
+4. [Troubleshooting](#troubleshooting)
    - [Error 1](#error-1)
    - [Error 2](#error-2)
 5. [License](#license)
 6. [Contributing](#contributing)
 
-## Installation 🛠️
+## Installation
 
 ### Step 1
 
@@ -36,7 +36,7 @@ cd ../client
 npm install
 ```
 
-## Running the Program ✅
+## Running the Program
 
 Run the following command in both the `api` and `client` folders to start the development server.
 
@@ -68,7 +68,7 @@ Displays the results of a search query.
 
 ![Showing result of a search query](/client/public/search_function.png)
 
-## Troubleshooting ❌
+## Troubleshooting
 
 ### Error 1
 
