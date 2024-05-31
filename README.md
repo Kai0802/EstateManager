@@ -6,6 +6,8 @@ Download or clone the project with `git clone`, set up `.env` file for mongoosed
 Change directory to `api` and run `npm install`, and do the same thing for the `client` folder. This will make sure that all the node modules got installed properly.
 ## Run the program ✅
 run the command `npm run dev` for both `api` and `client` folders
+## Usage / Showcase
+![show case of front page]()
 ## Problems that might occur ❌
 ![DogComputerGIF](https://github.com/Kai0802/EstateManager/assets/75660550/39a439e3-231f-449a-bce3-0cf0c72e663e)
 ### Error 1: node:internal/modules/cjs/loader:1473 return process.dlopen(module, path.toNamespacedPath(filename)); 
