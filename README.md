@@ -21,20 +21,20 @@ EstateManager is a comprehensive web application for managing real estate listin
 
 Download or clone the project repository and set up the `.env` file for MongoDB, Firebase, and JWT.
 
-\`\`\`bash
+```bash
 git clone https://github.com/Kai0802/EstateManager.git
-\`\`\`
+```
 
 ### Step 2
 
 Change the directory to `api` and run `npm install`, then do the same for the `client` folder. This ensures that all the necessary node modules are installed.
 
-\`\`\`bash
+```bash
 cd api
 npm install
 cd ../client
 npm install
-\`\`\`
+```
 
 ## Running the Program ✅
 
@@ -72,31 +72,31 @@ Displays the results of a search query.
 
 ### Error 1
 
-\`\`\`plaintext
+```plaintext
 node:internal/modules/cjs/loader:1473 return process.dlopen(module, path.toNamespacedPath(filename));
-\`\`\`
+```
 
 **Solution:** Delete the `node_modules` directory and run `npm update` in the `api` folder.
 
-\`\`\`bash
+```bash
 cd api
 rm -rf node_modules
 npm update
-\`\`\`
+```
 
 ### Error 2
 
-\`\`\`plaintext
+```plaintext
 Failed to load module @rollup/rollup-win32-x64-msvc. Required DLL was not found.
-\`\`\`
+```
 
 **Solution:** Install the Microsoft Visual C++ Redistributable from [here](https://aka.ms/vs/17/release/vc_redist.x64.exe). Alternatively, install an older version of Vite.
 
-\`\`\`bash
+```bash
 cd client
 npm install vite@4.4.0
 npm run dev
-\`\`\`
+```
 
 ## License
 
